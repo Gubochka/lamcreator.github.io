@@ -65,6 +65,8 @@
     font-size: 23px;
     font-weight: bold;
     color: #ffffff;
+    float: right;
+    margin-top: 16px;
 }
 
 .card:nth-child(3) {
