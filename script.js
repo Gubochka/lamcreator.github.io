@@ -51,5 +51,6 @@ function setBackground(bgID){
         context.globalAlpha = 0.1
     }
     window.addEventListener("resize", () => resizeCanvas(canvas))
+    resizeCanvas(canvas)
 }
 setBackground("page-background")
