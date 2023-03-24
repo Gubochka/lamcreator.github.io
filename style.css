@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #282828;
+}
+
 #page-background {
     background-color: #282828;
     position: fixed;
@@ -44,15 +48,19 @@
 
 .content-data {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-areas: "img p";
     grid-column-gap: 10px;
+    justify-items: center;
 }
 
 .content-data img {
+    grid-area: img;
     border-radius: 7px;
     height: 200px;
 }
+
 .content-data p {
+    grid-area: p;
     text-align: left;
     margin: 0;
     font-size: 20px;
@@ -75,4 +83,76 @@
 }
 .card:nth-child(3) h1 {
     color: #f6f6f6;
+}
+
+@media screen and (max-width: 1460px) {
+    .card {
+        background-size: auto 100% !important;
+    }
+
+    .content-data {
+        grid-template-areas: "img" "p";
+    }
+
+    .content-data img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    canvas {
+        display: none;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    p {
+        font-size: 19px !important;
+    }
+
+    .card {
+        width: 60%;
+        background-size: auto 100% !important;
+    }
+
+    .content-data {
+        grid-template-areas: "img" "p";
+    }
+
+    .content-data img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    canvas {
+        display: none;
+    }
+
+    h1 {
+        font-size: 22px !important;
+    }
+
+    p {
+        font-size: 18px !important;
+    }
+
+    .card {
+        width: 80%;
+        background-size: auto 100% !important;
+    }
+
+    .content-data {
+        grid-template-areas: "img" "p";
+    }
+
+    .content-data img {
+        height: auto;
+        width: 100%;
+    }
+
 }
